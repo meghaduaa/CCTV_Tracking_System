@@ -1,5 +1,4 @@
-# CCTV_Tracking_System
-# CCTV Suspect Tracking System using YOLOv8 and Deep SORT
+# CCTV Suspect Tracking System 
 
 This project enables tracking of a specific person (suspect) in CCTV footage using object detection and multi-object tracking. It uses YOLOv8 for detecting people and Deep SORT for assigning and maintaining consistent tracking IDs across video frames. The user can select a suspect based on the ID, and the system will track that person across the footage.
 

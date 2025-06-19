@@ -89,13 +89,3 @@ pip install -r requirements.txt
 - Integration with live webcam or real CCTV streams
 - Logging of suspect movement
 
-## License
-
-This project is open-source and licensed under the MIT License.
-
-## Author
-
-Your Name  
-B.Tech in Computer Science and Engineering  
-GitHub: https://github.com/your-username  
-LinkedIn: https://linkedin.com/in/your-profile

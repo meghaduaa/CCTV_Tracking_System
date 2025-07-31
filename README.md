@@ -1,14 +1,17 @@
 # CCTV Suspect Tracking System 
 
-This project enables tracking of a specific person (suspect) in CCTV footage using object detection and multi-object tracking. It uses YOLOv8 for detecting people and Deep SORT for assigning and maintaining consistent tracking IDs across video frames. The user can select a suspect based on the ID, and the system will track that person across the footage.
+This project enables tracking of a specific person (suspect) in CCTV footage using object detection and multi-object tracking. It uses YOLOv8 to detect people and Deep SORT to assign consistent tracking IDs across video frames.
+
+The user can select a suspect to track based on a visible ID assigned to each person. The system then highlights that person throughout the footage and re-prompts every 10 seconds, allowing you to change the suspect being tracked.
 
 ## Features
 
-- Detects all people in video frames using YOLOv8
-- Assigns unique IDs to individuals using Deep SORT
-- User can select a suspect by entering their ID
-- Tracks and highlights the suspect with a red bounding box
-- Others are marked with green bounding boxes
+-Detects people in each video frame using YOLOv8
+-Assigns unique, consistent tracking IDs using Deep SORT
+-Prompts the user to select a suspect ID after the first second
+-Re-prompts the user every 10 seconds to reselect or change the suspect
+-Selected suspect is shown with a red bounding box
+-Other individuals are shown with green bounding boxes
 
 ## Technologies Used
 
@@ -60,14 +63,19 @@ CCTV_Suspect_Tracking/
 python main.py
 ```
 
-3. Wait for green boxes and IDs to appear on the video.
-4. Enter the desired suspect ID when prompted in the terminal.
-5. The selected suspect will be tracked in red. Press `q` to quit the video.
+3.Watch the video:
+- After 1 second (≈30 frames), green boxes with unique IDs will appear.
+- You will then be prompted in the terminal to enter the ID of the person to track.
+4.The selected suspect will be marked with a red bounding box.
+- Every 10 seconds, the system will again ask you to reselect (or skip by pressing Enter).
+- Others remain highlighted in green.
+
 
 ## Usage Notes
 
-- If no people are detected in the first few frames, the ID prompt will be delayed until valid tracking IDs are available.
-- The system currently supports selecting only one suspect. Multiple suspect tracking can be implemented as an enhancement.
+-The system delays prompting for suspect selection until at least 1 second has passed and valid tracking IDs are visible on-screen.
+-The suspect can be re-selected every 10 seconds, which is useful if IDs change or if you want to switch targets.
+-If you press Enter without typing an ID, the current suspect continues to be tracked.
 
 ## Requirements
 

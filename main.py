@@ -13,7 +13,7 @@ id_selected = False
 frame_count = 0
 delay_frames = 30  # Delay ~1 second before asking for input
 
-print("🎥 Starting video... press 'q' to quit.")
+print("Starting video... press 'q' to quit.")
 
 while True:
     ret, frame = cap.read()
@@ -68,12 +68,12 @@ while True:
                 entered = int(entered)
                 if entered in current_ids:
                     suspect_id = entered
-                    print(f"✅ Tracking suspect {suspect_id}")
+                    print(f"Tracking suspect {suspect_id}")
                     break
                 else:
-                    print("❌ ID not found. Try again.")
+                    print("ID not found. Try again.")
             except ValueError:
-                print("❌ Please enter a valid number.")
+                print("Please enter a valid number.")
         id_selected = True
 
     # Step 5: Show video

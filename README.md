@@ -6,12 +6,12 @@ The user can select a suspect to track based on a visible ID assigned to each pe
 
 ## Features
 
--Detects people in each video frame using YOLOv8
--Assigns unique, consistent tracking IDs using Deep SORT
--Prompts the user to select a suspect ID after the first second
--Re-prompts the user every 10 seconds to reselect or change the suspect
--Selected suspect is shown with a red bounding box
--Other individuals are shown with green bounding boxes
+- Detects people in each video frame using YOLOv8
+- Assigns unique, consistent tracking IDs using Deep SORT
+- Prompts the user to select a suspect ID after the first second
+- Re-prompts the user every 10 seconds to reselect or change the suspect
+- Selected suspect is shown with a red bounding box
+- Other individuals are shown with green bounding boxes
 
 ## Technologies Used
 
@@ -73,9 +73,9 @@ python main.py
 
 ## Usage Notes
 
--The system delays prompting for suspect selection until at least 1 second has passed and valid tracking IDs are visible on-screen.
--The suspect can be re-selected every 10 seconds, which is useful if IDs change or if you want to switch targets.
--If you press Enter without typing an ID, the current suspect continues to be tracked.
+- The system delays prompting for suspect selection until at least 1 second has passed and valid tracking IDs are visible on-screen.
+- The suspect can be re-selected every 10 seconds, which is useful if IDs change or if you want to switch targets.
+- If you press Enter without typing an ID, the current suspect continues to be tracked.
 
 ## Requirements
 
